@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="login.css">
-     <title>signin-signup</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/login.css">
+    <title>signin-signup</title>
 </head>
+
 <body>
     <div class="container">
         <div class="signin-signup">
@@ -26,7 +29,7 @@
                     <a href="#" class="social-icon">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    
+
                     <a href="" class="social-icon">
                         <i class="fab fa-twitter"></i>
                     </a>
@@ -37,7 +40,7 @@
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
-<p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Signup</a></p>
+                <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Signup</a></p>
             </form>
 
             <form action="" class="sign-up-form">
@@ -53,7 +56,7 @@
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" >
+                    <input type="password" placeholder="Password">
                 </div>
                 <input type="submit" value="Sign up" class="btn">
                 <p class="social-text">Or Sign in with social plateform</p>
@@ -61,7 +64,7 @@
                     <a href="#" class="social-icon">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    
+
                     <a href="" class="social-icon">
                         <i class="fab fa-twitter"></i>
                     </a>
@@ -97,27 +100,28 @@
             </div>
 
             <script>
-                        const sign_in_btn = document.querySelector("#sign-in-btn");
-            const sign_up_btn = document.querySelector("#sign-up-btn");
-            const container = document.querySelector(".container");
-            const sign_in_btn2 = document.querySelector("#sign-in-btn2");
-            const sign_up_btn2 = document.querySelector("#sign-up-btn2");
-            
-            sign_up_btn.addEventListener("click", () => {
-                container.classList.add("sign-up-mode");
-            });
-            sign_in_btn.addEventListener("click", () => {
-                container.classList.remove("sign-up-mode");
-            });
-            sign_up_btn2.addEventListener("click", () => {
-                container.classList.add("sign-up-mode2");
-            });
-            sign_in_btn2.addEventListener("click", () => {
-                container.classList.remove("sign-up-mode2");
-            });
+                const sign_in_btn = document.querySelector("#sign-in-btn");
+                const sign_up_btn = document.querySelector("#sign-up-btn");
+                const container = document.querySelector(".container");
+                const sign_in_btn2 = document.querySelector("#sign-in-btn2");
+                const sign_up_btn2 = document.querySelector("#sign-up-btn2");
+
+                sign_up_btn.addEventListener("click", () => {
+                    container.classList.add("sign-up-mode");
+                });
+                sign_in_btn.addEventListener("click", () => {
+                    container.classList.remove("sign-up-mode");
+                });
+                sign_up_btn2.addEventListener("click", () => {
+                    container.classList.add("sign-up-mode2");
+                });
+                sign_in_btn2.addEventListener("click", () => {
+                    container.classList.remove("sign-up-mode2");
+                });
             </script>
         </div>
 
     </div>
 </body>
+
 </html>

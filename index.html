@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crowny Box Cricket</title>
-  <link rel="stylesheet" href="./css/styless.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
     referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
@@ -27,7 +27,7 @@
           <li><a href="TURF.html">turfs</a> </li>
           <li><a href="news.html">news</a> </li>
           <li><a href="ContactUS.html">contact</a> </li>
-          <a href="Login.html" class="primary-btn">Login</a>
+          <a href="" onclick="loginHandler()" class="primary-btn">Login</a>
           <!-- <li> <button class="primary-btn">BOOK NOW</button> </li> -->
         </ul>
         <span class="fa fa-bars" onclick="menutoggle()"></span>
@@ -36,6 +36,7 @@
   </header>
 
 
+  <script src="index.js"></script>
   <script>
     var menulist = document.getElementById('menulist');
     menulist.style.maxHeight = "0px";

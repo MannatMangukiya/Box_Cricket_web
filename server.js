@@ -2,6 +2,7 @@ var express = require("express")
 var bodyParser = require("body-parser")
 var mongoose = require("mongoose")
 const bcrypt = require('bcrypt')
+const path = require("path")
 
 const app = express()
 
@@ -11,6 +12,11 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({
   extended: true
 }))
+app.get('*.js', function (req, res, next) {
+  res.set('Content-Type', 'text/javascript');
+  next();
+});
+
 
 const url = 'mongodb://localhost:27017';
 const dbName = 'Crowny';
@@ -19,9 +25,11 @@ mongoose.connect('mongodb://localhost:27017/Crowny')
 var db = mongoose.connection
 db.on('error', () => console.log("Error in Connecting to Database"))
 db.once('open', () => console.log("Connected to Database"))
-console.log('http://localhost:3000/index.html')
+
+
+
 app.post("/sign_up", async (req, res) => {
-    var username = req.body.username;
+  var username = req.body.username;
   var email = req.body.email;
   var password = req.body.password;
 
@@ -32,7 +40,7 @@ app.post("/sign_up", async (req, res) => {
   }
 
   var data = {
-    "username" : username,
+    "username": username,
     "email": email,
     "password": password
   }
@@ -75,15 +83,16 @@ app.get("/", (req, res) => {
   res.set({
     "Allow-acces-Allow-Origin": '*'
   })
+
   res.sendFile(__dirname + "/index.html");
 }).listen(3000);
 
 app.get("/login", (req, res) => {
-  res.redirect('/login.html');
+  res.sendFile(__dirname + '/Pages/login.html');
 });
 
 app.get("/login_success", (req, res) => {
-  res.redirect('/index.html');
+  res.sendFile(__dirname + '/index.html');
 })
 
 console.log("Listening on port 3000")
